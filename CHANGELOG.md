@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2
+
+- Fixed the crash on five noise types: Marble, Turbulence Vector, ANT Turbulence, Rocks and Planet
+- Soft now really is soft for Variable Lacunarity Turbulence, where it was acting as Hard. A terrain made with that noise and Soft will look different when regenerated
+
 ## 1.0.1
 
 The source code is now in this repository, with the license it has always been released under.

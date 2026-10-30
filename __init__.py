@@ -7,7 +7,7 @@
 bl_info = {
     "name": "Landscape",
     "author": "Jimmy Hazevoet & The French Monkey",
-    "version": (1, 0, 1),
+    "version": (1, 0, 2),
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Landscape",
     "description": "Generate parametric Landscape",
@@ -90,7 +90,7 @@ def _make_prop_list(props):
         props.basis_type,                     # nbasis
         props.vl_basis_type,                  # vlbasis
         props.distortion,                     # distortion
-        props.hard_noise,                     # hard_noise
+        int(props.hard_noise),                # hard_noise
         props.noise_depth,                    # depth
         props.amplitude,                      # amp
         props.frequency,                      # freq
@@ -98,9 +98,9 @@ def _make_prop_list(props):
         props.lacunarity,                     # lacunarity
         props.offset,                         # offset
         props.gain,                           # gain
-        props.marble_bias,                    # marble_bias
-        props.marble_sharp,                   # marble_sharp
-        props.marble_shape,                   # marble_shape
+        int(props.marble_bias),               # marble_bias
+        int(props.marble_sharp),              # marble_sharp
+        int(props.marble_shape),              # marble_shape
         props.height,                         # height
         props.height_invert,                  # height_invert
         props.height_offset,                  # height_offset

@@ -3,7 +3,7 @@
 ![landscape-thumb](https://github.com/user-attachments/assets/817d6169-c9c3-43ad-ba3b-acf7a3818088)
 
 **Author:** The French Monkey (TFMSTYLE)  
-**Version:** 1.0.1  
+**Version:** 1.0.2  
 
 ---
 
