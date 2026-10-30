@@ -1,7 +1,13 @@
+# SPDX-FileCopyrightText: 2025-2026 The French Monkey
+# SPDX-FileCopyrightText: 2017-2022 Blender Foundation
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Builds on A.N.T. Landscape by Jimmy Hazevoet, released under GPL-2.0-or-later.
+
 bl_info = {
     "name": "Landscape",
     "author": "Jimmy Hazevoet & The French Monkey",
-    "version": (1, 0, 0),
+    "version": (1, 0, 1),
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Landscape",
     "description": "Generate parametric Landscape",

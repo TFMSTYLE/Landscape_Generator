@@ -3,7 +3,7 @@
 ![landscape-thumb](https://github.com/user-attachments/assets/817d6169-c9c3-43ad-ba3b-acf7a3818088)
 
 **Author:** The French Monkey (TFMSTYLE)  
-**Version:** 1.0.0  
+**Version:** 1.0.1  
 
 ---
 
@@ -238,3 +238,21 @@ Deletes the currently selected generated terrain object.
 - Apply **Surface Variation** for subtle randomness or stylized landscapes.  
 - Materials and colors are optional visual helpers — they do not affect geometry.  
 - The generated mesh is fully editable, UV-ready, and can be sculpted or displaced for further refinement.
+
+---
+
+## Install
+
+Needs Blender 4.2 or later. Get the zip from [tfmstyle.com](https://tfmstyle.com), then in Blender open Edit > Preferences > Get Extensions, open the menu at the top right and pick Install from Disk.
+
+To build the zip yourself, run this in the repo folder:
+
+```bash
+blender --command extension build
+```
+
+---
+
+## License
+
+GPL 3.0 or later. See [LICENSE](LICENSE).
