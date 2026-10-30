@@ -7,7 +7,7 @@
 bl_info = {
     "name": "Landscape",
     "author": "Jimmy Hazevoet & The French Monkey",
-    "version": (1, 0, 2),
+    "version": (1, 0, 3),
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Landscape",
     "description": "Generate parametric Landscape",
@@ -33,6 +33,11 @@ from mathutils.noise import (
 import random
 from random import random as rand
 from time import time
+
+try:
+    from . import relay_updater
+except ImportError:  # the Addon Collection has its own updates
+    relay_updater = None
 
 # ------------------------------------------------------------
 # Noise Basis Types
@@ -1758,6 +1763,8 @@ class VIEW3D_PT_landscape_generator(bpy.types.Panel):
     bl_category = "Landscape"
 
     def draw(self, context):
+        if relay_updater:
+            relay_updater.draw(self.layout)
         layout = self.layout
         scene = context.scene
         props = scene.landscape_props
@@ -1961,12 +1968,16 @@ classes = (
 )
 
 def register():
+    if relay_updater:
+        relay_updater.register("blender-landscape")
     from bpy.utils import register_class
     for cls in classes:
         register_class(cls)
     bpy.types.Scene.landscape_props = bpy.props.PointerProperty(type=LandscapeProperties)
 
 def unregister():
+    if relay_updater:
+        relay_updater.unregister()
     from bpy.utils import unregister_class
     for cls in reversed(classes):
         unregister_class(cls)
