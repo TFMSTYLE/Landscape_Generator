@@ -7,7 +7,7 @@
 bl_info = {
     "name": "Landscape",
     "author": "Jimmy Hazevoet & The French Monkey",
-    "version": (1, 0, 3),
+    "version": (1, 0, 4),
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Landscape",
     "description": "Generate parametric Landscape",
